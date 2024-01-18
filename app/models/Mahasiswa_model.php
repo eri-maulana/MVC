@@ -25,7 +25,7 @@ class Mahasiswa_model
 
    public function tambahDataMahasiswa($data)
    {
-      $query = "INSERT INTO mahasiswa (nama, nrp, email, jurusan) VALUES (:nama, :nrp, :email, :jurusan)";
+      $query = "INSERT INTO mahasiswa (nama, nrp, email, jurusan) VALUES (:nama, :nrp, :email, :jurusan)"; // error pada eps 9 selama 1 jam
 
 
       $this->db->query($query);
