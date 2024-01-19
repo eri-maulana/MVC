@@ -11,7 +11,7 @@
    <div class="row">
       <div class="col-6">
          <!-- Button trigger modal -->
-         <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
+         <button type="button" class="btn btn-primary tombolTambahData mb-3" data-toggle="modal" data-target="#formModal">
             Tambah Data Mahasiswa
          </button>
 
@@ -19,10 +19,12 @@
          <ul class="list-group">
             <?php
             foreach ($data['mhs'] as $mhs) : ?>
-               <li class="list-group-item d-flex justify-content-between align-items-center">
+               <li class="list-group-item ">
                   <?= $mhs['nama']; ?>
-                  <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="btn btn-sm btn-secondary">Detail</a>
+                  <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="btn btn-sm btn-danger float-right ml-1" onclick="return confirm('yakin akan menghapus data ini?')">Hapus</a>
+                  <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="btn btn-sm btn-secondary  float-right ml-1">Detail</a>
                </li>
+
             <?php
             endforeach;
             ?>
