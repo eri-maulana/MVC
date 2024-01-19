@@ -8,12 +8,16 @@
       </div>
    </div>
 
-   <div class="row">
-      <div class="col-6">
-         <!-- Button trigger modal -->
-         <button type="button" class="btn btn-primary tombolTambahData mb-3" data-toggle="modal" data-target="#formModal">
+   <div class="row mb-3">
+      <div class="col-lg-6">
+         <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
             Tambah Data Mahasiswa
          </button>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-6">
 
          <h3>Daftar Mahasiswa</h3>
          <ul class="list-group">
@@ -22,6 +26,7 @@
                <li class="list-group-item ">
                   <?= $mhs['nama']; ?>
                   <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="btn btn-sm btn-danger float-right ml-1" onclick="return confirm('yakin akan menghapus data ini?')">Hapus</a>
+                  <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="btn btn-sm btn-success float-right ml-1 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $mhs['id']; ?>">Ubah</a>
                   <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="btn btn-sm btn-secondary  float-right ml-1">Detail</a>
                </li>
 
